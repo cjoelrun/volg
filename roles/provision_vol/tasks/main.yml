@@ -1,2 +1,2 @@
 - name: add volume group
-  lvg:  vg=vg_storage pesize=1048576 state=present pvs=/dev/sdb
+  lvg:  vg={{ volume_group }} pesize=1048576 state=present pvs={{ physical_drive }}
