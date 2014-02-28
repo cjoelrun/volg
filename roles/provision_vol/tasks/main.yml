@@ -4,7 +4,7 @@
 
 - name: check for vol group
   fail: msg="volume group exists"
-  when: "{{ volume_group in volume_group_output.stdout  }}"
+  when: volume_group in volume_group_output.stdout
 
 - name: add volume group
   lvg:  vg={{ volume_group }} pesize=1048576 state=present pvs={{ physical_drive }}
